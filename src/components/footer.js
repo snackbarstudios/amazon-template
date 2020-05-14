@@ -154,7 +154,7 @@ const Footer = () => {
               fontSize: 1,
               textDecoration: "none",
               ":hover": {
-                fontWeight: "heading",
+                color: "highlight",
               },
             }}
           >
@@ -179,7 +179,7 @@ const Footer = () => {
               fontSize: 0,
               textDecoration: "none",
               ":hover": {
-                fontWeight: "heading",
+                color: "highlight",
               },
             }}
           >
