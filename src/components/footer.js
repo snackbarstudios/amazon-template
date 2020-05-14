@@ -60,7 +60,6 @@ const Footer = () => {
       color: "background",
       fontSize: 1,
       textDecoration: "none",
-      textTransform: "capitalize",
       display: "block",
       ":hover": {
         color: "highlight",
@@ -136,7 +135,16 @@ const Footer = () => {
               href={urlLink}
               target="_blank"
               rel="noreferrer noopener"
-              sx={style.link}
+              sx={{
+                color: "background",
+                fontSize: 1,
+                textDecoration: "none",
+                textTransform: "capitalize",
+                display: "block",
+                ":hover": {
+                  color: "highlight",
+                },
+              }}
             >
               {title}
             </a>
