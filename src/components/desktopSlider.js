@@ -55,7 +55,7 @@ const DesktopSlider = ({
               )}
             />
           </div>
-          {imageGallery.length >= 1 ? (
+          {imageGallery.length >= 2 ? (
             <div
               sx={{
                 width: imageGallery.length > 2 ? "300px" : "200px",

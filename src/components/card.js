@@ -5,6 +5,7 @@ import DesktopSlider from "./desktopSlider";
 import MobileSlider from "./mobileSlider";
 
 const Card = ({ section }) => {
+  console.log(section);
   return (
     <Fragment>
       {section.map(
