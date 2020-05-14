@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, title, link }) {
+function SEO({ description, lang, meta, title }) {
   const { datoCmsSite } = useStaticQuery(
     graphql`
       query {
@@ -33,15 +33,12 @@ function SEO({ description, lang, meta, title, link }) {
               }
             }
           }
-          faviconMetaTags {
-            tags
-          }
         }
       }
     `
   );
 
-  const { globalSeo, faviconMetaTags } = datoCmsSite;
+  const { globalSeo } = datoCmsSite;
   console.log(datoCmsSite);
 
   const metaDescription = description || globalSeo.fallbackSeo.description;
@@ -108,14 +105,6 @@ function SEO({ description, lang, meta, title, link }) {
           content: globalSeo.fallbackSeo.image.sizes.height,
         },
       ].concat(meta)}
-      link={[
-        {
-          rel: `icon`,
-          sizes: `12x12`,
-          href: `dfsdfsd`,
-          type: `image/png`,
-        },
-      ]}
     />
   );
 }
