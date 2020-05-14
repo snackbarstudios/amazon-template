@@ -60,6 +60,7 @@ const Footer = () => {
       color: "background",
       fontSize: 1,
       textDecoration: "none",
+      textTransform: "capitalize",
       display: "block",
       ":hover": {
         color: "highlight",
