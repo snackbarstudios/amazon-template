@@ -9,9 +9,9 @@ import { Fragment } from "react";
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+      datoCmsSite {
+        globalSeo {
+          siteName
         }
       }
     }
@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         }}
       >
         <div>
-          <Header siteTitle={data.site.siteMetadata.title} />
+          <Header siteTitle={data.datoCmsSite.globalSeo.siteName} />
           {children}
         </div>
         <Footer />

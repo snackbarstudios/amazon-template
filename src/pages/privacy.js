@@ -26,7 +26,7 @@ const PrivacyPage = () => {
 
   return (
     <Layout>
-      <SEO title="Page two" />
+      <SEO title={pageTitle} />
       <MainContainer>
         <div sx={{ maxWidth: "800px", margin: "0px auto" }}>
           <div sx={{ color: "highlight" }}>

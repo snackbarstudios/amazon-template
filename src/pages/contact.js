@@ -2,6 +2,7 @@
 import { jsx, Styled } from "theme-ui";
 import { useStaticQuery, graphql } from "gatsby";
 import Layout from "../components/layout";
+import SEO from "../components/seo";
 import MainContainer from "../components/mainContainer";
 import Image from "../components/image";
 import { createMarkup } from "../utils/functions";
@@ -68,6 +69,7 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO title={pageTitle} />
       <MainContainer>
         <div
           sx={{

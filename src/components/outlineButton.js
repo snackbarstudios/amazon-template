@@ -9,9 +9,9 @@ const OutlineButton = ({ text, href, fullWidth }) => {
         border: "1px solid",
         display: "block",
         maxWidth: "170px",
-        borderColor: "highlight",
-        backgroundColor: "highlight",
-        color: "background",
+        borderColor: ["primary", null, "highlight"],
+        backgroundColor: ["highlight", null, "primary"],
+        color: ["primary", null, "highlight"],
         fontWeight: "body",
         fontSize: 1,
         paddingX: 2,
@@ -21,7 +21,9 @@ const OutlineButton = ({ text, href, fullWidth }) => {
         textDecoration: "none",
         fontFamily: "heading",
         ":hover": {
-          boxShadow: "0 0 20px 2px rgba(0,0,0,0.17);",
+          borderColor: ["primary", null, "primary"],
+          backgroundColor: ["highlight", null, "highlight"],
+          color: ["primary", null, "background"],
         },
       }}
       href={href}
