@@ -24,7 +24,8 @@ export default {
   space: [0, 8, 16, 24, 32, 48, 64, 96, 128, 256, 512],
   fonts: {
     body: "Source Sans Pro, sans-serif",
-    heading: "Montserrat, sans-serif",
+    // heading: "Montserrat, sans-serif",
+    heading: "Source Sans Pro, sans-serif",
   },
   fontSizes: [12, 16, 24, 36, 48, 64],
   fontWeights: {

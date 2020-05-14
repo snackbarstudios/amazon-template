@@ -8,7 +8,7 @@ const ProductGallery = ({ products }) => {
   return (
     <Fragment>
       <h2 sx={{ textAlign: "center", color: "highlight", mt: [6], mb: "0px" }}>
-        Feature products
+        Featured products
       </h2>
       <div
         sx={{
