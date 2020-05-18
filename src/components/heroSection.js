@@ -73,7 +73,9 @@ const HeroSection = () => {
           >
             {heroDescription}
           </p>
-          <Styled.a href={heroLink.slug}>{heroLink.slug}</Styled.a>
+          <div sx={{ display: "inline-block" }}>
+            <Styled.a href={heroLink.slug}>{heroLink.slug}</Styled.a>
+          </div>
         </div>
       </div>
       <div

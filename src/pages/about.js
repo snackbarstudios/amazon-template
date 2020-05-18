@@ -14,7 +14,6 @@ const About = () => {
           title
           pageTitle
           ingressText
-          ingressTitle
           bannerImage {
             fluid {
               src
@@ -68,7 +67,6 @@ const About = () => {
     bannerImage,
     aboutSection,
     ingressText,
-    ingressTitle,
   } = datoCmsAboutPage;
 
   return (
@@ -76,7 +74,6 @@ const About = () => {
       <SEO title={title} />
       <main>
         <Banner image={bannerImage.fluid} />
-
         <section
           sx={{
             textAlign: "center",
@@ -97,7 +94,7 @@ const About = () => {
               display: "block",
             }}
           >
-            {ingressTitle}
+            {pageTitle}
           </h2>
           <p>{ingressText}</p>
         </section>

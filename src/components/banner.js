@@ -52,13 +52,24 @@ const Banner = ({
           {text}
         </p>
         {bannerLink && (
-          <Outlinebutton href={bannerLink.slug} text={bannerLink.slug} />
+          <div
+            sx={{
+              a: {
+                color: "background",
+                textTransform: "capitalize",
+              },
+            }}
+          >
+            <Outlinebutton href={bannerLink.slug} text={bannerLink.slug} />
+          </div>
         )}
         {bannerExternalLink?.length > 0 && (
-          <Outlinebutton
-            href={bannerExternalLink}
-            text={bannerExternalLinkTitle}
-          />
+          <div>
+            <Outlinebutton
+              href={bannerExternalLink}
+              text={bannerExternalLinkTitle}
+            />
+          </div>
         )}
       </div>
     </BackgroundImage>

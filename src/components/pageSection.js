@@ -42,24 +42,30 @@ const PageSection = ({ section }) => {
             )}
           />
           {section.buttonLink && (
-            <StyledLink href={section.buttonLink.slug}>
-              {section.buttonLink.slug}
-            </StyledLink>
+            <div
+              sx={{
+                py: 3,
+              }}
+            >
+              <StyledLink href={section.buttonLink.slug}>
+                {section.buttonLink.slug}
+              </StyledLink>
+            </div>
           )}
           {section.externalBtnLink?.length > 0 && (
-            <Styled.a
-              href={section.externalBtnLink}
-              rel="noopener noreferrer"
-              target="_blank"
-              // sx={{
-              //   fontSize: 1,
-              //   "::after": {
-              //     margin: "auto",
-              //   },
-              // }}
+            <div
+              sx={{
+                py: 3,
+              }}
             >
-              {section.externalButtonLinkText}
-            </Styled.a>
+              <Styled.a
+                href={section.externalBtnLink}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {section.externalButtonLinkText}
+              </Styled.a>
+            </div>
           )}
         </div>
       </div>

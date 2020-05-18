@@ -31,7 +31,9 @@ const ProductGallery = ({ title, products }) => {
                 alt={product.productImage.alt}
               />
               <p>{product.productTitle}</p>
-              <StyledLink href="/products">View products</StyledLink>
+              <div>
+                <StyledLink href="/products">View products</StyledLink>
+              </div>
             </div>
           );
         })}
