@@ -60,7 +60,9 @@ const Banner = ({
               },
             }}
           >
-            <Outlinebutton href={bannerLink.slug} text={bannerLink.slug} />
+            <div>
+              <Outlinebutton href={bannerLink.slug} text={bannerLink.slug} />
+            </div>
           </div>
         )}
         {bannerExternalLink?.length > 0 && (

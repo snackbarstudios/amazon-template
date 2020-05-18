@@ -130,7 +130,7 @@ const Footer = () => {
           <div sx={style.hr}>
             <Hr />
           </div>
-          {/* {socialMediaLinks.map(({ title, urlLink }, index) => (
+          {socialMediaLinks.map(({ title, urlLink }, index) => (
             <a
               key={index}
               href={urlLink}
@@ -149,7 +149,7 @@ const Footer = () => {
             >
               {title}
             </a>
-          ))} */}
+          ))}
         </div>
         <div sx={style.flex}>
           <Styled.h4 sx={style.heading}>{privacyHeading}</Styled.h4>

@@ -9,26 +9,6 @@ const StyledLink = ({ children, href, open }) => {
       to={href}
       aria-label={`Link to ${href}`}
       activeClassName="active"
-      // sx={{
-      //   color: "highlight",
-      //   textTransform: "capitalize",
-      //   fontWeight: "heading",
-      //   textDecoration: "none",
-      //   "::after": {
-      //     content: '" "',
-      //     display: "block",
-      //     width: "10%",
-      //     pt: 1,
-      //     borderBottom: "2px solid",
-      //     borderColor: "highlight",
-      //     transition: "0.2s",
-      //     borderRadius: "2px",
-      //     margin: "auto",
-      //   },
-      //   ":hover::after": {
-      //     width: "15%",
-      //   },
-      // }}
       sx={{
         display: "inline-block",
         maxWidth: "170px",

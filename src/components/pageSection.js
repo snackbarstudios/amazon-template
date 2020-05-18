@@ -44,7 +44,7 @@ const PageSection = ({ section }) => {
           {section.buttonLink && (
             <div
               sx={{
-                py: 3,
+                py: 2,
               }}
             >
               <StyledLink href={section.buttonLink.slug}>
@@ -55,7 +55,7 @@ const PageSection = ({ section }) => {
           {section.externalBtnLink?.length > 0 && (
             <div
               sx={{
-                py: 3,
+                py: 2,
               }}
             >
               <Styled.a

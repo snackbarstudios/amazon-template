@@ -31,7 +31,7 @@ const ProductGallery = ({ title, products }) => {
                 alt={product.productImage.alt}
               />
               <p>{product.productTitle}</p>
-              <div>
+              <div sx={{ pt: 2 }}>
                 <StyledLink href="/products">View products</StyledLink>
               </div>
             </div>

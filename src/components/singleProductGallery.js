@@ -37,7 +37,7 @@ const SingleProductGallery = ({ title, products }) => {
               products[0].productDescriptionNode.childMarkdownRemark.html
             )}
           />
-          <div>
+          <div sx={{ pt: 2 }}>
             <Styled.a href="/products">View product</Styled.a>
           </div>
         </div>
