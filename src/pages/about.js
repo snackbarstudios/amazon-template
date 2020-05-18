@@ -99,8 +99,8 @@ const About = () => {
           <p>{ingressText}</p>
         </section>
         <section sx={{ py: 4 }}>
-          {aboutSection.map((section) => (
-            <PageSection key={section.id} section={section} />
+          {aboutSection.map((section, index) => (
+            <PageSection key={index} section={section} />
           ))}
         </section>
       </main>
