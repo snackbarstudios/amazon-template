@@ -58,7 +58,7 @@ const Footer = () => {
     },
     link: {
       color: "background",
-      fontSize: 1,
+      fontSize: 0,
       textDecoration: "none",
       display: "block",
       ":hover": {
@@ -70,7 +70,7 @@ const Footer = () => {
       mx: [0, 3, 5],
     },
     hr: {
-      mb: 2,
+      mb: 1,
     },
   };
 
@@ -97,7 +97,7 @@ const Footer = () => {
           <p
             sx={{
               color: "background",
-              fontSize: 1,
+              fontSize: 0,
               m: 0,
               mb: 1,
             }}
@@ -109,6 +109,7 @@ const Footer = () => {
               p: {
                 variant: "markdownText.p",
                 color: "background",
+                fontSize: 0,
               },
             }}
             dangerouslySetInnerHTML={createMarkup(
@@ -137,7 +138,7 @@ const Footer = () => {
               rel="noreferrer noopener"
               sx={{
                 color: "background",
-                fontSize: 1,
+                fontSize: 0,
                 textDecoration: "none",
                 textTransform: "capitalize",
                 display: "block",
@@ -160,7 +161,7 @@ const Footer = () => {
             aria-label={`Link to ${slug}`}
             sx={{
               color: "background",
-              fontSize: 1,
+              fontSize: 0,
               textDecoration: "none",
               ":hover": {
                 color: "highlight",

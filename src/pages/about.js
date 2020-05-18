@@ -11,6 +11,7 @@ const About = () => {
     graphql`
       query {
         datoCmsAboutPage {
+          title
           pageTitle
           ingressText
           ingressTitle
@@ -42,6 +43,7 @@ const About = () => {
   );
 
   const {
+    title,
     pageTitle,
     bannerImage,
     aboutSection,
@@ -51,7 +53,7 @@ const About = () => {
 
   return (
     <Layout>
-      <SEO title={pageTitle} />
+      <SEO title={title} />
       <main>
         <Banner image={bannerImage.fluid} />
 

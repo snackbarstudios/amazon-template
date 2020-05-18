@@ -27,6 +27,7 @@ const IndexPage = () => {
           oceancalm
         }
         datoCmsLandingPage {
+          productBlockTitle
           landinpageSection {
             id
             blockDescriptionNode {
@@ -89,7 +90,7 @@ const IndexPage = () => {
           }
           productGallery {
             id
-            productDescrriptionNode {
+            productDescriptionNode {
               childMarkdownRemark {
                 html
               }
@@ -118,6 +119,7 @@ const IndexPage = () => {
   }, [datoCmsColorMode.oceancalm, datoCmsColorMode.raspberrypie, setColorMode]);
 
   const {
+    productBlockTitle,
     landinpageSection,
     ingress,
     parallaxImage,
@@ -145,9 +147,15 @@ const IndexPage = () => {
           </aside>
           <section>
             {productGallery.length > 1 ? (
-              <ProductGallery products={productGallery} />
+              <ProductGallery
+                title={productBlockTitle}
+                products={productGallery}
+              />
             ) : (
-              <SingleProductGallery products={productGallery} />
+              <SingleProductGallery
+                title={productBlockTitle}
+                products={productGallery}
+              />
             )}
           </section>
           {landinpageSection.map((node) => {

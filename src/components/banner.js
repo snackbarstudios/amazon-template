@@ -45,7 +45,7 @@ const Banner = ({
           sx={{
             fontFamily: "body",
             lineHeight: "heading",
-            fontWeight: "body",
+            fontWeight: "200",
             fontSize: [2, 3],
           }}
         >

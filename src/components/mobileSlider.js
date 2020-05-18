@@ -49,14 +49,14 @@ const MobileSlider = ({
         <Styled.h2>{heading}</Styled.h2>
         <p
           sx={{
-            fontWeight: "heading",
             textTransform: "uppercase",
-            my: 2,
+            fontSize: 2,
+            my: 3,
           }}
         >
-          Price: {price}
+          {price}
         </p>
-        <div sx={{ my: 2 }}>
+        <div sx={{ my: 3 }}>
           <div
             dangerouslySetInnerHTML={createMarkup(
               descriptionNode.childMarkdownRemark.html
@@ -65,9 +65,9 @@ const MobileSlider = ({
         </div>
         <p
           sx={{
-            fontWeight: "heading",
             textTransform: "uppercase",
-            my: 2,
+            fontSize: 2,
+            my: 3,
           }}
         >
           {specificationTitle}

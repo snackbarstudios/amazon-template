@@ -67,7 +67,7 @@ const HeroSection = () => {
               maxWidth: "500px",
               color: "highlight",
               fontSize: [2, 3],
-              fontWeight: "body",
+              fontWeight: "200",
               lineHeight: 1.2,
             }}
           >

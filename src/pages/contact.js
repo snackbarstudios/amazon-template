@@ -12,6 +12,7 @@ const Contact = () => {
     graphql`
       query {
         datoCmsContactPage {
+          title
           pageTitle
           phoneNumber
           email
@@ -32,6 +33,7 @@ const Contact = () => {
     `
   );
   const {
+    title,
     pageTitle,
     companyName,
     adressNode,
@@ -69,7 +71,7 @@ const Contact = () => {
 
   return (
     <Layout>
-      <SEO title={pageTitle} />
+      <SEO title={title} />
       <MainContainer>
         <div
           sx={{

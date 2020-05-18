@@ -5,6 +5,6 @@
  */
 
 // You can delete this file if you're not using it
-
-require("typeface-montserrat");
+require("typeface-open-sans");
 require("typeface-source-sans-pro");
+require("typeface-poppins");

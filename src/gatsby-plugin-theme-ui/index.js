@@ -23,14 +23,13 @@ export default {
   breakpoints: ["40em", "56em", "64em"],
   space: [0, 8, 16, 24, 32, 48, 64, 96, 128, 256, 512],
   fonts: {
-    body: "Source Sans Pro, sans-serif",
-    // heading: "Montserrat, sans-serif",
-    heading: "Source Sans Pro, sans-serif",
+    heading: "Poppins, sans-serif",
+    body: "Poppins, sans-serif",
   },
   fontSizes: [12, 16, 24, 36, 48, 64],
   fontWeights: {
-    body: 400,
-    heading: 900,
+    body: 200,
+    heading: 600,
     bold: 600,
   },
   lineHeights: {
@@ -48,9 +47,9 @@ export default {
     heading: {
       fontFamily: "heading",
       lineHeight: "heading",
-      fontWeight: "heading",
+      fontWeight: "body",
       color: "text",
-      fontSize: [2],
+      fontSize: [3],
     },
     body: {
       fontFamily: "body",
@@ -104,21 +103,22 @@ export default {
       textTransform: "capitalize",
     },
     h2: {
-      fontFamily: "body",
-      fontWeight: "heading",
-      fontSize: 2,
+      fontFamily: "heading",
+      fontWeight: "200",
+      lineHeight: "heading",
+      fontSize: 3,
       margin: 0,
     },
     h3: {
       fontFamily: "heading",
-      fontWeight: "heading",
+      fontWeight: "200",
       fontSize: 2,
       margin: 0,
     },
     h4: {
       fontFamily: "heading",
       fontWeight: "body",
-      fontSize: "20px",
+      fontSize: 0,
       color: "background",
       margin: 0,
     },

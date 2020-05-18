@@ -10,7 +10,7 @@ const NavigationLink = ({ children, href, open }) => {
         listStyle: "none",
         position: "relative",
         height: ["auto", "25px"],
-        ml: 4,
+        ml: [0, 4, null],
         mt: [4, "0px"],
         pl: 1,
       }}
@@ -24,7 +24,7 @@ const NavigationLink = ({ children, href, open }) => {
           position: "relative",
           textDecoration: "none",
           fontFamily: "body",
-          fontWeight: "heading",
+          fontWeight: "body",
           fontSize: [4, 1],
           color: "text",
           zIndex: 2,
@@ -33,9 +33,9 @@ const NavigationLink = ({ children, href, open }) => {
             position: "absolute",
             zIndex: -1,
             display: "block",
-            width: "120%",
-            height: ["24px", "16px"],
-            ml: "-20%",
+            width: 0,
+            height: ["24px", "10px"],
+            ml: ["-10%", "-10%", null],
             mt: ["-24px", "-12px"],
             backgroundColor: "primary",
             opacity: 0,
@@ -44,16 +44,19 @@ const NavigationLink = ({ children, href, open }) => {
           ":hover": {
             "::after": {
               opacity: 1,
+              width: ["110%", "110%", null],
             },
           },
           ":active": {
             "::after": {
               opacity: 1,
+              width: ["110%", "110%", null],
             },
           },
           "&.active": {
             "::after": {
               opacity: 1,
+              width: ["110%", "110%", null],
             },
           },
         }}
