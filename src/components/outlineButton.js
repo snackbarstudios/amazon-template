@@ -23,6 +23,7 @@ const OutlineButton = ({ text, href, fullWidth }) => {
       //   fontFamily: "heading",
       //   ":hover": {
       //     backgroundColor: lighten("highlight", 0.1),
+      //     color: "red",
       //   },
       // }}
       sx={{
@@ -34,6 +35,7 @@ const OutlineButton = ({ text, href, fullWidth }) => {
         fontWeight: "body",
         fontSize: [4, 1],
         color: "text",
+        paddingX: "10px",
         zIndex: 2,
         "::after": {
           content: '" "',
@@ -43,13 +45,15 @@ const OutlineButton = ({ text, href, fullWidth }) => {
           width: "100%",
           height: "2px",
           backgroundColor: "highlight",
-          opacity: 1,
-          transition: "0.5s",
+          transition: "0.2s",
+          ml: "-10px",
+          marginTop: "5px",
         },
         ":hover": {
+          color: "background",
           "::after": {
-            height: "30px",
-            mt: "-30px",
+            height: "40px",
+            mt: "-33px",
           },
         },
       }}

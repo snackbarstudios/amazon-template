@@ -104,9 +104,12 @@ const DesktopSlider = ({
               specificationListNode.childMarkdownRemark.html
             )}
           />
-          {/* <div sx={{ py: 3 }}> */}
-          <Outlinebutton text={externalButtonText} href={externalButtonLink} />
-          {/* </div> */}
+          <div sx={{ py: 3 }}>
+            <Outlinebutton
+              text={externalButtonText}
+              href={externalButtonLink}
+            />
+          </div>
         </div>
       </div>
       <div sx={{ flex: "1" }}>
