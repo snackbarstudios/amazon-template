@@ -1,11 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import PropTypes from "prop-types";
 
-const OutlineButton = ({ text, href, fullWidth }) => {
+const StyledButton = () => {
   return (
-    <a
+    <div
       sx={{
+        "a": {
+
+        
         // display: ["block", null, "inline-block"],
         display: "inline-block",
         // maxWidth: ["100%", "170px", null],
@@ -43,17 +45,9 @@ const OutlineButton = ({ text, href, fullWidth }) => {
             // mt: [0, null, "-33px"],
           },
         },
-      }}
-      href={href}
-    >
-      {text}
-    </a>
+      }}}
+    />
   );
 };
 
-OutlineButton.propTypes = {
-  href: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-};
-
-export default OutlineButton;
+export default StyledButton;

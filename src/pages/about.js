@@ -36,6 +36,26 @@ const About = () => {
                 ...GatsbyDatoCmsFluid
               }
             }
+            externalButtonLinkText
+            externalBtnLink
+            buttonLink {
+              ... on DatoCmsProductsPage {
+                id
+                slug
+                title
+              }
+              ... on DatoCmsContactPage {
+                id
+                email
+                slug
+                title
+              }
+              ... on DatoCmsAboutPage {
+                id
+                slug
+                title
+              }
+            }
           }
         }
       }

@@ -51,12 +51,12 @@ const PageSection = ({ section }) => {
               href={section.externalBtnLink}
               rel="noopener noreferrer"
               target="_blank"
-              sx={{
-                fontSize: 1,
-                "::after": {
-                  margin: "auto",
-                },
-              }}
+              // sx={{
+              //   fontSize: 1,
+              //   "::after": {
+              //     margin: "auto",
+              //   },
+              // }}
             >
               {section.externalButtonLinkText}
             </Styled.a>
