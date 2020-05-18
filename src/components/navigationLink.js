@@ -34,9 +34,9 @@ const NavigationLink = ({ children, href, open }) => {
             zIndex: -1,
             display: "block",
             width: 0,
-            height: ["24px", "10px"],
-            ml: ["-10%", "-10%", null],
-            mt: ["-24px", "-12px"],
+            height: ["15px", "8px", null],
+            ml: ["-5%", "-10%", null],
+            mt: ["-28px", "-10px", null],
             backgroundColor: "primary",
             opacity: 0,
             transition: "0.5s",
@@ -44,19 +44,19 @@ const NavigationLink = ({ children, href, open }) => {
           ":hover": {
             "::after": {
               opacity: 1,
-              width: ["110%", "110%", null],
+              width: ["105%", "110%", null],
             },
           },
           ":active": {
             "::after": {
               opacity: 1,
-              width: ["110%", "110%", null],
+              width: ["105%", "110%", null],
             },
           },
           "&.active": {
             "::after": {
               opacity: 1,
-              width: ["110%", "110%", null],
+              width: ["105%", "110%", null],
             },
           },
         }}

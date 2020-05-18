@@ -83,7 +83,9 @@ const MobileSlider = ({
             specificationListNode.childMarkdownRemark.html
           )}
         />
-        <Outlinebutton text={externalButtonText} href={externalButtonLink} />
+        <div sx={{ pt: 3 }}>
+          <Outlinebutton text={externalButtonText} href={externalButtonLink} />
+        </div>
       </div>
     </article>
   );

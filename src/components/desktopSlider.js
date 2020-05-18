@@ -37,7 +37,7 @@ const DesktopSlider = ({
       }}
     >
       <div sx={{ flex: "1" }}>
-        <div sx={{ px: 3, ml: 6 }}>
+        <div sx={{ px: 3, ml: [2, null, 6] }}>
           <Styled.h2>{heading}</Styled.h2>
           <p
             sx={{
