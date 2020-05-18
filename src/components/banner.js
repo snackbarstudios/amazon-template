@@ -13,7 +13,7 @@ const Banner = ({
 }) => {
   return (
     <BackgroundImage
-      fluid={image.fluid}
+      fluid={image}
       backgroundColor={`#F2EDEE`}
       style={{
         height: "400px",
