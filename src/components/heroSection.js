@@ -73,7 +73,13 @@ const HeroSection = () => {
           >
             {heroDescription}
           </p>
-          <div>
+          <div
+            sx={{
+              a: {
+                color: "highlight",
+              },
+            }}
+          >
             <Styled.a href={heroLink.slug}>{heroLink.slug}</Styled.a>
           </div>
         </div>

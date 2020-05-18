@@ -138,7 +138,7 @@ const IndexPage = () => {
           <Ingress>{ingress}</Ingress>
           <aside>
             <Banner
-              image={parallaxImage.fluid}
+              image={parallaxImage}
               text={bannerText}
               bannerExternalLink={bannerExternalLink}
               bannerLink={bannerLink}
