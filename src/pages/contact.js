@@ -80,6 +80,7 @@ const Contact = () => {
             width: "100%",
             height: "100%",
             mt: 5,
+            mb: 3,
           }}
         >
           <div

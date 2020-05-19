@@ -24,39 +24,32 @@ const NavigationLink = ({ children, href, open }) => {
           position: "relative",
           textDecoration: "none",
           fontFamily: "body",
-          fontWeight: "body",
           fontSize: [3, 1],
           color: "text",
           zIndex: 2,
           "::after": {
             content: '" "',
-            position: "absolute",
-            zIndex: -1,
             display: "block",
-            width: 0,
-            height: ["15px", "8px", null],
-            ml: ["-5%", "-10%", null],
-            mt: ["-22px", "-10px", null],
-            backgroundColor: "primary",
-            opacity: 0,
-            transition: "0.5s",
+            width: "0%",
+            borderBottom: "1px solid",
+            borderColor: "highlight",
+            transition: "0.2s",
+            borderRadius: "2px",
+            margin: "auto",
           },
           ":hover": {
             "::after": {
-              opacity: 1,
-              width: ["105%", "110%", null],
+              width: "100%",
             },
           },
           ":active": {
             "::after": {
-              opacity: 1,
-              width: ["105%", "110%", null],
+              width: "100%",
             },
           },
           "&.active": {
             "::after": {
-              opacity: 1,
-              width: ["105%", "110%", null],
+              width: "100%",
             },
           },
         }}

@@ -16,7 +16,7 @@ const About = () => {
           ingressText
           bannerImage {
             fluid {
-              src
+              ...GatsbyDatoCmsFluid
             }
             alt
           }

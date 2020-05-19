@@ -26,13 +26,11 @@ const PageSection = ({ section }) => {
             height: "100%",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
-            textAlign: "center",
             px: [4, 6],
             py: [6],
           }}
         >
-          <Styled.h2 sx={{ color: "highlight", mb: 3 }}>
+          <Styled.h2 sx={{ color: "text", mb: 3 }}>
             {section.blockTitle}
           </Styled.h2>
           <div
