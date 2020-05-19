@@ -26,6 +26,7 @@ const PageSection = ({ section }) => {
             height: "100%",
             display: "flex",
             flexDirection: "column",
+            justifyContent: "center",
             px: [4, 6],
             py: [6],
           }}
