@@ -7,6 +7,8 @@ import Slider from "react-slick";
 import { useState } from "react";
 import { createMarkup } from "../utils/functions";
 import Outlinebutton from "./outlineButton";
+import Arrow from "./arrow";
+import { toggleText } from "../utils/functions";
 
 const DesktopSlider = ({
   imageGallery,
@@ -19,6 +21,8 @@ const DesktopSlider = ({
   externalButtonLink,
 }) => {
   const [focusImage, setFocusImage] = useState();
+  const [maxheight, setMaxheight] = useState("90px");
+  const [open, setOpen] = useState(false);
 
   const settings = {
     infinite: true,
@@ -42,11 +46,49 @@ const DesktopSlider = ({
   return (
     <article
       sx={{
-        display: ["none", "flex", "flex"],
-        flexDirection: ["column-reverse", "row-reverse"],
-        my: 8,
+        display: ["none", "flex", null],
+        my: 7,
       }}
     >
+      <div sx={{ flex: "1" }}>
+        <div>
+          <Image
+            alt={imageGallery[0].alt}
+            image={focusImage ? focusImage : imageGallery[0].fluid}
+          />
+        </div>
+        {imageGallery.length >= 2 ? (
+          <div
+            sx={{
+              width: imageGallery.length > 2 ? "300px" : "200px",
+              display: ["none", "block", null],
+              mx: "auto",
+            }}
+          >
+            <Slider {...settings}>
+              {imageGallery.map(({ fluid, alt }, index) => (
+                <div
+                  key={index}
+                  sx={{
+                    width: "100px",
+                    height: "100px",
+                    outline: "none",
+                    cursor: "pointer",
+                    mt: 4,
+                  }}
+                  onClick={() => setFocusImage(fluid)}
+                >
+                  <Image
+                    sx={{ width: "100px", height: "100px" }}
+                    alt={alt}
+                    image={fluid}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
+        ) : null}
+      </div>
       <div sx={{ flex: "1" }}>
         <div sx={{ px: 3, ml: [2, null, 6] }}>
           <Styled.h2>{heading}</Styled.h2>
@@ -61,11 +103,38 @@ const DesktopSlider = ({
           </p>
           <div sx={{ my: 3 }}>
             <div
+              sx={{
+                maxHeight: maxheight,
+                overflow: "hidden",
+                transition: "max-height .5s ease-in-out",
+              }}
               dangerouslySetInnerHTML={createMarkup(
                 descriptionNode.childMarkdownRemark.html
               )}
             />
           </div>
+          <button
+            sx={{
+              outline: "none",
+              border: "none",
+              display: "flex",
+              alignItems: "center",
+              background: "transparent",
+              cursor: "poiter",
+              p: {
+                ml: 1,
+              },
+              div: {
+                svg: {
+                  transform: open ? "rotate(180deg)" : "rotate(0deg)",
+                },
+              },
+            }}
+            onClick={() => toggleText(open, setOpen, setMaxheight)}
+          >
+            <Arrow fill="#111111" width="12px" />
+            <p> View more</p>
+          </button>
           <p
             sx={{
               fontSize: 2,
@@ -93,45 +162,6 @@ const DesktopSlider = ({
             />
           </div>
         </div>
-      </div>
-      <div sx={{ flex: "1" }}>
-        <div>
-          <Image
-            alt={imageGallery[0].alt}
-            image={focusImage ? focusImage : imageGallery[0].fluid}
-          />
-        </div>
-        {imageGallery.length >= 2 ? (
-          <div
-            sx={{
-              width: imageGallery.length > 2 ? "300px" : "200px",
-              display: ["none", "inline-block", null],
-              my: 2,
-            }}
-          >
-            <Slider {...settings}>
-              {imageGallery.map(({ fluid, alt }, index) => (
-                <div
-                  key={index}
-                  sx={{
-                    width: "100px",
-                    height: "100px",
-                    outline: "none",
-                    cursor: "pointer",
-                    mt: 4,
-                  }}
-                  onClick={() => setFocusImage(fluid)}
-                >
-                  <Image
-                    sx={{ width: "100px", height: "100px" }}
-                    alt={alt}
-                    image={fluid}
-                  />
-                </div>
-              ))}
-            </Slider>
-          </div>
-        ) : null}
       </div>
     </article>
   );

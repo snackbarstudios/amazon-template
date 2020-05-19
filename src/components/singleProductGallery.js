@@ -7,9 +7,7 @@ import { Fragment } from "react";
 const SingleProductGallery = ({ title, products }) => {
   return (
     <Fragment>
-      <Styled.h2
-        sx={{ textAlign: "center", color: "highlight", mt: [6], mb: "0px" }}
-      >
+      <Styled.h2 sx={{ textAlign: "center", mt: 6, mb: "0px" }}>
         {title}
       </Styled.h2>
       <div

@@ -1,11 +1,14 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui";
+import { useState } from "react";
 import Image from "../components/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { createMarkup } from "../utils/functions";
 import Outlinebutton from "./outlineButton";
+import Arrow from "./arrow";
+import { toggleText } from "../utils/functions";
 
 const MobileSlider = ({
   imageGallery,
@@ -27,6 +30,10 @@ const MobileSlider = ({
     dots: true,
     focusOnSelect: true,
   };
+
+  const [maxheight, setMaxheight] = useState("90px");
+  const [open, setOpen] = useState(false);
+
   return (
     <article
       sx={{
@@ -37,7 +44,7 @@ const MobileSlider = ({
       }}
     >
       <div sx={{ px: [0, 0, 3], flex: "1" }}>
-        <div sx={{ mb: 4 }}>
+        <div sx={{ mb: 5 }}>
           <Slider {...settings}>
             {imageGallery.map(({ fluid, alt }, index) => (
               <div key={index}>
@@ -51,23 +58,51 @@ const MobileSlider = ({
           sx={{
             textTransform: "uppercase",
             fontSize: 2,
-            my: 3,
+            my: 2,
           }}
         >
           {price}
         </p>
-        <div sx={{ my: 3 }}>
+
+        <div sx={{ my: 2 }}>
           <div
+            sx={{
+              maxHeight: maxheight,
+              overflow: "hidden",
+              transition: "max-height .5s ease-in-out",
+            }}
             dangerouslySetInnerHTML={createMarkup(
               descriptionNode.childMarkdownRemark.html
             )}
           />
+          <button
+            sx={{
+              outline: "none",
+              border: "none",
+              display: "flex",
+              alignItems: "center",
+              background: "transparent",
+              cursor: "poiter",
+              p: {
+                ml: 1,
+              },
+              div: {
+                svg: {
+                  transform: open ? "rotate(180deg)" : "rotate(0deg)",
+                },
+              },
+            }}
+            onClick={() => toggleText(open, setOpen, setMaxheight)}
+          >
+            <Arrow fill="#111111" width="12px" />
+            <p> View more</p>
+          </button>
         </div>
         <p
           sx={{
             textTransform: "uppercase",
             fontSize: 2,
-            my: 3,
+            my: 2,
           }}
         >
           {specificationTitle}
