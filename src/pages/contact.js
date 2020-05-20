@@ -13,7 +13,6 @@ const Contact = () => {
       query {
         datoCmsContactPage {
           title
-          pageTitle
           phoneNumber
           email
           companyName
@@ -34,7 +33,6 @@ const Contact = () => {
   );
   const {
     title,
-    pageTitle,
     companyName,
     adressNode,
     phoneNumber,
@@ -80,7 +78,7 @@ const Contact = () => {
             flexDirection: ["column-reverse", "row", null],
             width: "100%",
             height: "100%",
-            my: 7,
+            my: [3, 7, null],
           }}
         >
           <div
@@ -97,7 +95,7 @@ const Contact = () => {
                   textTransform: "uppercase",
                 }}
               ></div>
-              <div sx={{ color: "highlight" }}>
+              <div sx={{ color: "highlight", mb: 3 }}>
                 <Styled.h2>{companyName}</Styled.h2>
               </div>
               <div

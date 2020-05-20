@@ -14,7 +14,7 @@ const ProductGallery = ({ title, products }) => {
         sx={{
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "space-around",
+          justifyContent: "center",
           p: 4,
         }}
       >
@@ -22,7 +22,12 @@ const ProductGallery = ({ title, products }) => {
           return (
             <div
               key={product.id}
-              sx={{ minWidth: "250px", textAlign: "center", pb: 4 }}
+              sx={{
+                minWidth: "300px",
+                textAlign: "center",
+                py: 4,
+                px: [2, 3, null],
+              }}
             >
               <Image
                 image={product.productImage.fluid}

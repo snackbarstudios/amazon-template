@@ -118,7 +118,7 @@ export default {
     h4: {
       fontFamily: "heading",
       fontWeight: "body",
-      fontSize: 0,
+      fontSize: 1,
       color: "background",
       margin: 0,
     },
