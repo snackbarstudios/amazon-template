@@ -130,7 +130,7 @@ const IndexPage = () => {
     productGallery,
   } = datoCmsLandingPage;
   return (
-    <Layout>
+    <Layout sx={{ mt: 0 }}>
       <SEO title="Home" />
       <HeroSection />
       <main>

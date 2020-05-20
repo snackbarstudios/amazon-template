@@ -147,7 +147,7 @@ export default {
         ml: "-10px",
         marginTop: "5px",
       },
-      ":hover": {
+      ":hover, :active": {
         color: "background",
         "::after": {
           height: "40px",

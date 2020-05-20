@@ -60,7 +60,16 @@ const DesktopSlider = ({
         {imageGallery.length >= 2 ? (
           <div
             sx={{
-              width: imageGallery.length > 2 ? "300px" : "200px",
+              width:
+                imageGallery.length > 5
+                  ? "calc(80px * 6)"
+                  : imageGallery.length > 4
+                  ? "calc(80px * 5)"
+                  : imageGallery.length > 3
+                  ? "calc(80px * 4)"
+                  : imageGallery.length > 2
+                  ? "calc(80px * 3)"
+                  : "calc(80px * 2)",
               display: ["none", "block", null],
               mx: "auto",
             }}
@@ -70,8 +79,8 @@ const DesktopSlider = ({
                 <div
                   key={index}
                   sx={{
-                    width: "100px",
-                    height: "100px",
+                    width: "100%",
+                    height: "100%",
                     outline: "none",
                     cursor: "pointer",
                     mt: 4,
@@ -79,7 +88,7 @@ const DesktopSlider = ({
                   onClick={() => setFocusImage(fluid)}
                 >
                   <Image
-                    sx={{ width: "100px", height: "100px" }}
+                    sx={{ width: "100%", height: "100%" }}
                     alt={alt}
                     image={fluid}
                   />

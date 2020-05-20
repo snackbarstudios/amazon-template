@@ -3,7 +3,13 @@ import PropTypes from "prop-types";
 import { jsx } from "theme-ui";
 import { Link } from "gatsby";
 
-const NavigationLink = ({ children, href, open }) => {
+const NavigationLink = ({
+  children,
+  href,
+  open,
+  showBackground,
+  landingpage,
+}) => {
   return (
     <li
       sx={{
@@ -25,14 +31,15 @@ const NavigationLink = ({ children, href, open }) => {
           textDecoration: "none",
           fontFamily: "body",
           fontSize: [3, 1],
-          color: "text",
+          color: showBackground || !landingpage ? "text" : "background",
           zIndex: 2,
           "::after": {
             content: '" "',
             display: "block",
             width: "0%",
             borderBottom: "1px solid",
-            borderColor: "highlight",
+            borderColor:
+              showBackground || !landingpage ? "highlight" : "background",
             transition: "0.2s",
             borderRadius: "2px",
             margin: "auto",

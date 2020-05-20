@@ -43,7 +43,7 @@ const HeroSection = () => {
     <div
       sx={{
         display: "flex",
-        height: ["calc(100vh - 60px)"],
+        height: "100vh",
         flexDirection: ["column-reverse", null, "row"],
       }}
     >

@@ -23,7 +23,6 @@ const Layout = ({ children }) => {
         sx={{
           position: "relative",
           minHeight: "100vh",
-          mt: "60px",
           main: {
             pb: ["550px", "330px"],
           },

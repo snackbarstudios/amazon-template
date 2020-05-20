@@ -53,7 +53,7 @@ const Footer = () => {
   const style = {
     heading: {
       color: "background",
-      mb: 2,
+      mb: 1,
       mt: 3,
     },
     link: {
@@ -143,7 +143,8 @@ const Footer = () => {
                 textTransform: "capitalize",
                 display: "block",
                 ":hover": {
-                  color: "highlight",
+                  // color: "primary",
+                  fontWeight: "heading",
                 },
               }}
             >

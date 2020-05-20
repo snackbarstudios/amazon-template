@@ -17,7 +17,12 @@ const PageSection = ({ section }) => {
         },
       }}
     >
-      <div sx={{ flex: "1", div: { height: "100%" } }}>
+      <div
+        sx={{
+          flex: "1",
+          div: { height: "100%", maxHeight: ["500px", "750px", "600px"] },
+        }}
+      >
         <Image image={section.blockImage.fluid} alt={section.blockImage.alt} />
       </div>
       <div sx={{ flex: "1" }}>

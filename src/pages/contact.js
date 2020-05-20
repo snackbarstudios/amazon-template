@@ -62,6 +62,7 @@ const Contact = () => {
     image: {
       width: "100%",
       height: "100%",
+      maxHeight: "400px",
       div: {
         width: "100%",
         height: "100%",
@@ -79,8 +80,7 @@ const Contact = () => {
             flexDirection: ["column-reverse", "row", null],
             width: "100%",
             height: "100%",
-            mt: 5,
-            mb: 3,
+            my: 7,
           }}
         >
           <div
@@ -89,17 +89,15 @@ const Contact = () => {
               backgroundColor: "primary",
             }}
           >
-            <div sx={{ p: 5 }}>
+            <div sx={{ p: [5, null, 6] }}>
               <div
                 sx={{
                   color: "highlight",
                   fontFamily: "body",
                   textTransform: "uppercase",
                 }}
-              >
-                <h1>{pageTitle}</h1>
-              </div>
-              <div sx={{ my: 3, color: "highlight" }}>
+              ></div>
+              <div sx={{ color: "highlight" }}>
                 <Styled.h2>{companyName}</Styled.h2>
               </div>
               <div
