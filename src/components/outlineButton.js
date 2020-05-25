@@ -38,6 +38,8 @@ const OutlineButton = ({ text, href }) => {
         },
       }}
       href={href}
+      target="_blank"
+      rel="noreferrer noopener"
     >
       {text}
     </a>

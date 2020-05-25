@@ -60,16 +60,28 @@ const DesktopSlider = ({
         {imageGallery.length >= 2 ? (
           <div
             sx={{
-              width:
+              width: [
                 imageGallery.length > 5
-                  ? "calc(100px * 6)"
+                  ? "calc(60px * 6)"
                   : imageGallery.length > 4
-                  ? "calc(100px * 5)"
+                  ? "calc(60px * 5)"
                   : imageGallery.length > 3
-                  ? "calc(100px * 4)"
+                  ? "calc(60px * 4)"
                   : imageGallery.length > 2
-                  ? "calc(100px * 3)"
-                  : "calc(100px * 2)",
+                  ? "calc(60px * 3)"
+                  : "calc(60px * 2)",
+
+                null,
+                imageGallery.length > 5
+                  ? "calc(90px * 6)"
+                  : imageGallery.length > 4
+                  ? "calc(90px * 5)"
+                  : imageGallery.length > 3
+                  ? "calc(90px * 4)"
+                  : imageGallery.length > 2
+                  ? "calc(90px * 3)"
+                  : "calc(90px * 2)",
+              ],
               display: ["none", "block"],
               mx: "auto",
             }}
