@@ -95,7 +95,7 @@ const DesktopSlider = ({
                     height: "100%",
                     outline: "none",
                     mt: 4,
-                    padding: 1,
+                    padding: "4px",
                     cursor: "pointer",
                   }}
                   onClick={() => setFocusImage(fluid)}

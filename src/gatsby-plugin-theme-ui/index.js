@@ -97,7 +97,7 @@ export default {
     },
     h1: {
       fontFamily: "heading",
-      fontWeight: "heading",
+      fontWeight: "body",
       fontSize: [4, 5, 6],
       margin: 0,
     },

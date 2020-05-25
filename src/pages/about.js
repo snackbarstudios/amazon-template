@@ -97,7 +97,7 @@ const About = () => {
           </h2>
           <p>{ingressText}</p>
         </section>
-        <section sx={{ py: 4 }}>
+        <section sx={{ pt: 4, pb: "80px" }}>
           {aboutSection.map((section, index) => (
             <PageSection key={index} section={section} />
           ))}
