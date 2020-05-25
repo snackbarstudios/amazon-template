@@ -44,10 +44,11 @@ const HeroSection = () => {
       sx={{
         display: "flex",
         height: "100vh",
+        minHeight: "800px",
         flexDirection: ["column-reverse", null, "row"],
       }}
     >
-      <div sx={{ flex: "2", backgroundColor: "primary" }}>
+      <div sx={{ flex: 2, backgroundColor: "primary" }}>
         <div
           sx={{
             padding: 4,
@@ -86,7 +87,8 @@ const HeroSection = () => {
       </div>
       <div
         sx={{
-          flex: "3",
+          flex: 3,
+          minHeight: "300px",
           position: "relative",
           backgroundColor: "primary",
         }}
