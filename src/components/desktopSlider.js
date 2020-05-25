@@ -62,14 +62,14 @@ const DesktopSlider = ({
             sx={{
               width:
                 imageGallery.length > 5
-                  ? "calc(85px * 6)"
+                  ? "calc(100px * 6)"
                   : imageGallery.length > 4
-                  ? "calc(85px * 5)"
+                  ? "calc(100px * 5)"
                   : imageGallery.length > 3
-                  ? "calc(85px * 4)"
+                  ? "calc(100px * 4)"
                   : imageGallery.length > 2
-                  ? "calc(85px * 3)"
-                  : "calc(85px * 2)",
+                  ? "calc(100px * 3)"
+                  : "calc(100px * 2)",
               display: ["none", "block"],
               mx: "auto",
             }}

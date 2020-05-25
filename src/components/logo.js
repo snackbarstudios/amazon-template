@@ -20,7 +20,7 @@ const Logo = () => {
   );
   return (
     <Link to="/">
-      <div sx={{ width: "80px", maxHeight: "70px", height: "70px", py: 2 }}>
+      <div sx={{ width: "120px", maxHeight: "80px", height: "80px", py: 2 }}>
         <Image
           image={datoCmsLogo.brandLogo.fluid}
           alt={datoCmsLogo.brandLogo.alt}

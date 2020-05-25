@@ -26,7 +26,7 @@ export default {
     heading: "Poppins, sans-serif",
     body: "Poppins, sans-serif",
   },
-  fontSizes: [12, 16, 24, 36, 48, 64],
+  fontSizes: [12, 16, 24, 36, 48, 64, 72],
   fontWeights: {
     body: 200,
     heading: 600,
@@ -98,9 +98,8 @@ export default {
     h1: {
       fontFamily: "heading",
       fontWeight: "heading",
-      fontSize: [4, 5],
+      fontSize: [4, 5, 6],
       margin: 0,
-      textTransform: "capitalize",
     },
     h2: {
       fontFamily: "heading",

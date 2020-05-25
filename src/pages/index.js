@@ -145,7 +145,7 @@ const IndexPage = () => {
               bannerExternalLinkTitle={bannerExternalLinkTitle}
             />
           </aside>
-          <section>
+          <section sx={{ mb: 4 }}>
             {productGallery.length > 1 ? (
               <ProductGallery
                 title={productBlockTitle}

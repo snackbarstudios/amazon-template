@@ -14,16 +14,14 @@ const Banner = ({
   return (
     <BackgroundImage
       fluid={image}
-      backgroundColor={`#F2EDEE`}
       style={{
-        height: "400px",
+        height: "500px",
       }}
     >
       <div
         sx={{
           height: "100%",
           width: "100%",
-          backgroundColor: "green",
           position: "absolute",
           top: 0,
           left: 0,
@@ -47,7 +45,7 @@ const Banner = ({
             lineHeight: "heading",
             fontWeight: "200",
             paddingX: [2, 2, 5],
-            fontSize: [2, 3],
+            fontSize: [2, 3, 4],
           }}
         >
           {text}

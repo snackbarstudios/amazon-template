@@ -23,10 +23,14 @@ const ProductGallery = ({ title, products }) => {
             <div
               key={product.id}
               sx={{
+                flex: 1,
                 minWidth: "300px",
+                maxWidth: ["300px", null, "400px"],
                 textAlign: "center",
                 py: 4,
-                px: [2, 3, null],
+                px: [2, 3],
+                position: "relative",
+                height: ["430px", null, "510px"],
               }}
             >
               <Image
@@ -34,7 +38,9 @@ const ProductGallery = ({ title, products }) => {
                 alt={product.productImage.alt}
               />
               <p>{product.productTitle}</p>
-              <div sx={{ pt: 2 }}>
+              <div
+                sx={{ position: "absolute", bottom: 0, left: 50, right: 50 }}
+              >
                 <StyledLink href="/products">View products</StyledLink>
               </div>
             </div>

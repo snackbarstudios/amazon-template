@@ -42,7 +42,24 @@ const ImageSlider = ({ slides }) => {
       >
         {fadeImages.length > 0
           ? fadeImages.map(({ fluid }, index) => (
-              <Img fluid={fluid} key={index} alt="slide" />
+              <Img
+                fluid={fluid}
+                key={index}
+                alt="slide"
+                sx={{
+                  ":after": {
+                    content: "' '",
+                    position: "absolute",
+                    width: "100%",
+                    height: "100%",
+                    top: 0,
+                    left: 0,
+                    background:
+                      "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1))",
+                    opacity: 1,
+                  },
+                }}
+              />
             ))
           : null}
       </Fade>
