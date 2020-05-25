@@ -1,39 +1,66 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const { datoCmsSite, site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
-            title
-            description
-            author
+            defaultDescription: description
+            name: siteName
+          }
+        }
+        datoCmsSite {
+          globalSeo {
+            facebookPageUrl
+            siteName
+            titleSuffix
+            twitterAccount
+            fallbackSeo {
+              description
+              title
+              twitterCard
+              image {
+                sizes {
+                  src
+                  width
+                  height
+                }
+              }
+            }
+          }
+          faviconMetaTags {
+            tags
           }
         }
       }
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
+  const { defaultDescription, name } = site.siteMetadata;
+
+  const { globalSeo, faviconMetaTags } = datoCmsSite;
+
+  const links = faviconMetaTags?.tags.map((link) => {
+    return link.attributes;
+  });
+
+  const metaDescription =
+    description || globalSeo?.fallbackSeo.description || defaultDescription;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
+      description={
+        globalSeo ? globalSeo.fallbackSeo.description : defaultDescription
+      }
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${globalSeo?.siteName} | ${name}`}
       meta={[
         {
           name: `description`,
@@ -52,12 +79,20 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          name: `og:image`,
+          content: globalSeo?.fallbackSeo.image.sizes.src,
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          name: `og:image:width`,
+          content: globalSeo?.fallbackSeo.image.sizes.width,
+        },
+        {
+          name: `og:image:height`,
+          content: globalSeo?.fallbackSeo.image.sizes.height,
+        },
+        {
+          name: `twitter:card`,
+          content: globalSeo?.fallbackSeo.twitterCard,
         },
         {
           name: `twitter:title`,
@@ -67,7 +102,20 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `twitter:image`,
+          content: globalSeo?.fallbackSeo.image.sizes.src,
+        },
+        {
+          name: `twitter:image:width`,
+          content: globalSeo?.fallbackSeo.image.sizes.width,
+        },
+        {
+          name: `twitter:image:height`,
+          content: globalSeo?.fallbackSeo.image.sizes.height,
+        },
       ].concat(meta)}
+      link={links}
     />
   );
 }
@@ -76,6 +124,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  siteName: ``,
 };
 
 SEO.propTypes = {

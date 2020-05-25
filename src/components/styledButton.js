@@ -1,16 +1,11 @@
-
 /** @jsx jsx */
-import PropTypes from "prop-types";
 import { jsx } from "theme-ui";
-import { Link } from "gatsby";
 
-const StyledLink = ({ children, href }) => {
+const StyledButton = () => {
   return (
-    <Link
-      to={href}
-      aria-label={`Link to ${href}`}
-      activeClassName="active"
+    <div
       sx={{
+        "a": {
         display: "inline-block",
         maxWidth: "170px",
         position: "relative",
@@ -19,7 +14,6 @@ const StyledLink = ({ children, href }) => {
         fontWeight: "body",
         fontSize: 1,
         color: "text",
-        textTransform: "capitalize",
         paddingX: "10px",
         textAlign: "center",
         zIndex: 2,
@@ -35,23 +29,16 @@ const StyledLink = ({ children, href }) => {
           ml: "-10px",
           marginTop: "5px",
         },
-        ":hover, :active": {
+        ":hover": {
           color: "background",
           "::after": {
             height: "40px",
             mt: "-33px",
           },
         },
-      }}
-    >
-      {children}
-    </Link>
+      }}}
+    />
   );
 };
 
-StyledLink.propTypes = {
-  children: PropTypes.node.isRequired,
-  href: PropTypes.string.isRequired,
-};
-
-export default StyledLink;
+export default StyledButton;

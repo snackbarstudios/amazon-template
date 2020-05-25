@@ -11,16 +11,15 @@ const About = () => {
     graphql`
       query {
         datoCmsAboutPage {
+          title
           pageTitle
           ingressText
-          ingressTitle
           bannerImage {
             fluid {
-              src
+              ...GatsbyDatoCmsFluid
             }
             alt
           }
-
           aboutSection {
             blockDescription
             blockDescriptionNode {
@@ -35,6 +34,26 @@ const About = () => {
                 ...GatsbyDatoCmsFluid
               }
             }
+            externalButtonLinkText
+            externalBtnLink
+            buttonLink {
+              ... on DatoCmsProductsPage {
+                id
+                slug
+                title
+              }
+              ... on DatoCmsContactPage {
+                id
+                email
+                slug
+                title
+              }
+              ... on DatoCmsAboutPage {
+                id
+                slug
+                title
+              }
+            }
           }
         }
       }
@@ -42,19 +61,18 @@ const About = () => {
   );
 
   const {
+    title,
     pageTitle,
     bannerImage,
     aboutSection,
     ingressText,
-    ingressTitle,
   } = datoCmsAboutPage;
 
   return (
     <Layout>
-      <SEO title={pageTitle} />
+      <SEO title={title} />
       <main>
         <Banner image={bannerImage.fluid} />
-
         <section
           sx={{
             textAlign: "center",
@@ -75,13 +93,13 @@ const About = () => {
               display: "block",
             }}
           >
-            {ingressTitle}
+            {pageTitle}
           </h2>
           <p>{ingressText}</p>
         </section>
         <section sx={{ py: 4 }}>
-          {aboutSection.map((section) => (
-            <PageSection key={section.id} section={section} />
+          {aboutSection.map((section, index) => (
+            <PageSection key={index} section={section} />
           ))}
         </section>
       </main>

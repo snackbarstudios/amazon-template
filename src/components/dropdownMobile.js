@@ -39,4 +39,5 @@ export default DropDownMobile;
 
 DropDownMobile.propTypes = {
   children: PropTypes.node.isRequired,
+  open: PropTypes.bool.isRequired,
 };

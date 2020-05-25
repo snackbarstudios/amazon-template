@@ -11,7 +11,6 @@ const Header = () => (
       zIndex: "99",
       top: "0",
       width: "100%",
-      backgroundColor: "white",
     }}
   >
     <NavigationDesktop />
