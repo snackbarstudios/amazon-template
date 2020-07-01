@@ -45,7 +45,7 @@ const Banner = ({
             lineHeight: "heading",
             fontWeight: "200",
             paddingX: [2, 2, 5],
-            fontSize: [2, 3, 4],
+            fontSize: [2, 3, 3],
           }}
         >
           {text}
